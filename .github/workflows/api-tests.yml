@@ -1,0 +1,8 @@
+name: Explore With Me API Tests
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    uses: Kazannik/MyTemplate/.github/workflows/api-tests.yml@ci
