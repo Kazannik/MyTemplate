@@ -20,13 +20,13 @@ jobs:
             echo "Используйте только репозиторий созданный Yandex Practicum, работы в форк репозитории не принимаются"
             exit -1
           fi
-          if [[ "$GITHUB_REPOSITORY_OWNER" == "yandex-praktikum" ]]
+          if [[ "$GITHUB_REPOSITORY_OWNER" == "Kazannik" ]]
           then
             echo "Use the repository automatically created by Yandex Practicum (works in fork repositories are not accepted)"
             echo "Используйте только репозиторий созданный Yandex Practicum, работы в форк репозитории не принимаются"
             exit -2
           fi
-          if [[ "$FORK" != "false" && "$GITHUB_REPOSITORY_OWNER" != "praktikum-java" ]]
+          if [[ "$FORK" != "false" && "$GITHUB_REPOSITORY_OWNER" != "Kazannik" ]]
           then
             echo "Share your repository, make it public"
             echo "Откройте доступ к вашему репозиторию, сделайте его публичным"
@@ -51,7 +51,7 @@ jobs:
       - name: Checkout tests
         uses: actions/checkout@v3
         with:
-          repository: 'yandex-praktikum/java-explore-with-me'
+          repository: 'Kazannik/MyTemplate'
           ref: ${{ github.event.pull_request.head.ref }}
           path: tests
 
